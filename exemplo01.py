@@ -1,10 +1,23 @@
-# Mostre na tela o comando "Hello world"
-print("Hello World")
+# Carregue conjunto de dados chamado kc_house_csv do HD para a memória
+#pip install pandas
+import pandas as pd
 
-# Mostre na tela o resultado da soma de 30 + 50
-print(30+50)
+#Função
+#Biblioteca Pandas - excluisva para manipulação de dados
+data = pd.read_csv('datasets/kc_house_data.csv')
 
-#Mostre o conteúdo da variavel soma de números
-soma_de_numeros = 30 + 50
-print(soma_de_numeros)
+#Mostre na tela as 5 primeiras linhas do conjunto de dados.
+#print(data.head())
+
+#Mostre o número de colunas e número de linhas dos conjunto de dados
+#print(data.shape)
+
+#Mostre o nome das colunas do conjunto de dados
+#print(data.columns)
+
+#Mostre na tela o conjunto de dados ordenados pela coluna price
+#print(data[['id', 'price']].sort_values('price'))
+
+#Mostre na tela o conjunto de dados ordenados pela coluna price do maior para menor
+print(data[['id', 'price']].sort_values('price', ascending=False))
 
